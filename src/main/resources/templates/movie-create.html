@@ -20,7 +20,7 @@
                     <a class="nav-link" th:href="@{index}">Movies List<span class="sr-only"></span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" th:href="@{request}">Add New Movie</a>
+                    <a class="nav-link active" th:href="@{form}">Add New Movie</a>
                 </li>
             </ul>
         </div>
@@ -33,7 +33,7 @@
         </div>
     </div>
     <div class="card-body">
-        <form method="post" th:action="@{/request}" th:object="${movie}">
+        <form method="post" th:action="@{form}" th:object="${movie}">
             <div class="form-group">
                 <label class="control-label">Name:</label>
                 <input class="form-control" th:field="${movie.name}"/>
